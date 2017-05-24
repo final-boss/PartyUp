@@ -17,3 +17,5 @@ config :party_up, PartyUp.Repo,
   database: "party_up_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+import_config "test.secret.exs"
