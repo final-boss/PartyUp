@@ -4,7 +4,7 @@ use Mix.Config
 # you can enable the server option below.
 config :party_up, PartyUp.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -17,5 +17,7 @@ config :party_up, PartyUp.Repo,
   database: "party_up_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :party_up, :sql_sandbox, true
 
 import_config "test.secret.exs"
