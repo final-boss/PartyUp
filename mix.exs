@@ -18,9 +18,14 @@ defmodule PartyUp.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {PartyUp, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+     applications: app_list()]
   end
+
+  defp app_list, do: [
+    :phoenix, :phoenix_pubsub, :phoenix_html,
+    :cowboy, :logger, :gettext, :phoenix_ecto,
+    :postgrex
+  ]
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
