@@ -40,7 +40,8 @@ defmodule PartyUp.Mixfile do
      {:cowboy,              "~> 1.0"},
      {:envy,                "~> 1.1.1"},
      {:ex_machina,          "~> 2.0", only: :test},
-     {:faker,               "~> 0.8", only: :test}]
+     {:faker,               "~> 0.8", only: :test},
+     {:good_times,          "~> 1.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
