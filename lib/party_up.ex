@@ -6,6 +6,11 @@ defmodule PartyUp do
   def start(_type, _args) do
     import Supervisor.Spec
 
+    # Load env vars
+    unless Mix.env == :prod do
+      Envy.auto_load
+    end
+
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
