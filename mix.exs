@@ -38,7 +38,8 @@ defmodule PartyUp.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext,             "~> 0.11"},
      {:cowboy,              "~> 1.0"},
-     {:envy,                "~> 1.1.1"}]
+     {:envy,                "~> 1.1.1"},
+     {:ex_machina,          "~> 2.0", only: :test}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
