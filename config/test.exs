@@ -19,5 +19,3 @@ config :party_up, PartyUp.Repo,
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :party_up, :sql_sandbox, true
-
-import_config "test.secret.exs"
