@@ -1,0 +1,28 @@
+users:
+id : integer
+username : string
+email : string
+password : string
+available : bool
+
+sessions:
+id : integer
+session_id: string
+user_id : integer
+
+consoles:
+id : integer
+name : string
+
+games:
+id : integer
+name : string
+
+console_games:
+id : integer
+console_id : integer
+game_id : integer
+
+users_games:
+user_id : integer
+console_game_id : integer
