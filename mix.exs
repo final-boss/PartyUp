@@ -44,7 +44,8 @@ defmodule PartyUp.Mixfile do
      {:good_times,          "~> 1.1"},
      {:html_sanitize_ex,    "~> 1.0.0"},
      {:scrivener_ecto,      "~> 1.0"},
-     {:secure_random,       "~> 0.5"}]
+     {:secure_random,       "~> 0.5"},
+     {:wallaby,             "~> 0.17.0", only: :test}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
