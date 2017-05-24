@@ -35,16 +35,16 @@ defmodule PartyUp.Mixfile do
      {:phoenix_ecto,        "~> 3.0"},
      {:postgrex,            ">= 0.0.0"},
      {:phoenix_html,        "~> 2.6"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext,             "~> 0.11"},
      {:cowboy,              "~> 1.0"},
      {:envy,                "~> 1.1.1"},
-     {:ex_machina,          "~> 2.0", only: :test},
-     {:faker,               "~> 0.8", only: :test},
      {:good_times,          "~> 1.1"},
      {:html_sanitize_ex,    "~> 1.0.0"},
      {:scrivener_ecto,      "~> 1.0"},
      {:secure_random,       "~> 0.5"},
+     {:phoenix_live_reload, "~> 1.0",    only: :dev},
+     {:ex_machina,          "~> 2.0",    only: :test},
+     {:faker,               "~> 0.8",    only: :test},
      {:wallaby,             "~> 0.17.0", only: :test}]
   end
 
