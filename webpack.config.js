@@ -25,8 +25,12 @@ module.exports = {
           options: { presets: ['react', 'es2016'] }
         },
         {
-          test:    /web\/static\/css\/.*\.scss?$/,
-          use:     extract.extract(['css-loader', 'sass-loader'])
+          test: /web\/static\/css\/.*\.scss?$/,
+          use:  extract.extract(['css-loader', 'sass-loader'])
+        },
+        {
+          test:   /\.(ttf|eot|svg|woff|woff2)(\?[\s\S]+)?$/,
+          loader: 'file-loader?outputPath=/fonts/'
         }
     ]
   },
