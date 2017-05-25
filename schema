@@ -13,8 +13,11 @@ created_at  : datetime
 updated_at  : datetime
 
 games:
-id : integer
-name : string
+id          : integer
+name        : string
+description : text
+created_at  : datetime
+updated_at  : datetime
 
 console_games:
 id : integer
