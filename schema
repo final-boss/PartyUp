@@ -19,10 +19,12 @@ description : text
 created_at  : datetime
 updated_at  : datetime
 
-console_games:
-id : integer
-console_id : integer
-game_id : integer
+games_platforms:
+id          : integer
+platform_id : integer
+game_id     : integer
+created_at  : datetime
+updated_at  : datetime
 
 users_games:
 user_id : integer
