@@ -5,11 +5,6 @@ encrpyted_password : string
 created_at         : datetime
 updated_at         : datetime
 
-sessions:
-id : integer
-session_id: string
-user_id : integer
-
 consoles:
 id : integer
 name : string
