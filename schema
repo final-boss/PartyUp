@@ -19,16 +19,16 @@ description : text
 created_at  : datetime
 updated_at  : datetime
 
-games_platforms:
+game_platforms:
 id          : integer
-platform_id : integer
 game_id     : integer
+platform_id : integer
 created_at  : datetime
 updated_at  : datetime
 
-games_platforms_users:
+game_platform_users:
 id               : integer
-user_id          : integer
 game_platform_id : integer
+user_id          : integer
 created_at       : datetime
 updated_at       : datetime
