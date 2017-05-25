@@ -5,9 +5,12 @@ encrpyted_password : string
 created_at         : datetime
 updated_at         : datetime
 
-consoles:
-id : integer
-name : string
+platforms:
+id          : integer
+name        : string
+description : text
+created_at  : datetime
+updated_at  : datetime
 
 games:
 id : integer
