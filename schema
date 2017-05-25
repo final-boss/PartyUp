@@ -26,6 +26,9 @@ game_id     : integer
 created_at  : datetime
 updated_at  : datetime
 
-users_games:
-user_id : integer
-console_game_id : integer
+games_platforms_users:
+id               : integer
+user_id          : integer
+game_platform_id : integer
+created_at       : datetime
+updated_at       : datetime
