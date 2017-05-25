@@ -1,28 +1,34 @@
 users:
-id : integer
-username : string
-email : string
-password : string
-available : bool
+id                 : integer
+email              : string
+encrpyted_password : string
+created_at         : datetime
+updated_at         : datetime
 
-sessions:
-id : integer
-session_id: string
-user_id : integer
-
-consoles:
-id : integer
-name : string
+platforms:
+id          : integer
+name        : string
+description : text
+created_at  : datetime
+updated_at  : datetime
 
 games:
-id : integer
-name : string
+id          : integer
+name        : string
+description : text
+created_at  : datetime
+updated_at  : datetime
 
-console_games:
-id : integer
-console_id : integer
-game_id : integer
+game_platforms:
+id          : integer
+game_id     : integer
+platform_id : integer
+created_at  : datetime
+updated_at  : datetime
 
-users_games:
-user_id : integer
-console_game_id : integer
+game_platform_users:
+id               : integer
+game_platform_id : integer
+user_id          : integer
+created_at       : datetime
+updated_at       : datetime
