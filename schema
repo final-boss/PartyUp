@@ -1,9 +1,9 @@
 users:
-id : integer
-username : string
-email : string
-password : string
-available : bool
+id                 : integer
+email              : string
+encrpyted_password : string
+created_at         : datetime
+updated_at         : datetime
 
 sessions:
 id : integer
