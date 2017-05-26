@@ -15,7 +15,6 @@
     <header class="header">
       <%= render "navbar.html" %>
     </header>
-
     <div class="container">
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
