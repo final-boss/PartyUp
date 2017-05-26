@@ -19,6 +19,9 @@ defmodule PartyUp.Router do
     get "/", LandingController, :index
     get "/login", LoginController, :index
     get "/sign-up", SignUpController, :index
+
+    post "/login", LoginController, :login
+    post "/sign-up", SignUpController, :sign_up
   end
 
   # Other scopes may use custom stacks.

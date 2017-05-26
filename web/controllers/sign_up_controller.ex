@@ -4,4 +4,8 @@ defmodule PartyUp.SignUpController do
   def index(conn, _params) do
     render conn, "index.html"
   end
+
+  def sign_up(conn, _params) do
+    
+  end
 end
