@@ -18,7 +18,7 @@
 
     <div class="container">
       <main role="main">
-
+        <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->

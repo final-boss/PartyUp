@@ -16,7 +16,9 @@ defmodule PartyUp.Router do
   scope "/", PartyUp do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", LandingController, :index
+    get "/login", LoginController, :index
+    get "/sign-up", SignUpController, :index
   end
 
   # Other scopes may use custom stacks.

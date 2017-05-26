@@ -1,4 +1,4 @@
-defmodule PartyUp.PageController do
+defmodule PartyUp.SignUpController do
   use PartyUp.Web, :controller
 
   def index(conn, _params) do
