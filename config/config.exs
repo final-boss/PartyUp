@@ -22,6 +22,15 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Addict user management lib
+config :addict,
+  secret_key: "243262243132244b417831494c6178474c55363273385a694b65347665",
+  extra_validation: fn ({valid, errors}, user_params) -> {valid, errors} end, # define extra validation here
+  user_schema: PartyUp.User,
+  repo: PartyUp.Repo,
+  from_email: "no-reply@partyupapp.com", # CHANGE THIS
+mail_service: nil
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
