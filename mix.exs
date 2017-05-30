@@ -47,6 +47,8 @@ defmodule PartyUp.Mixfile do
      {:html_sanitize_ex,    "~> 1.0.0"},
      {:scrivener_ecto,      "~> 1.0"},
      {:secure_random,       "~> 0.5"},
+     {:addict,              "~> 0.3"},
+     {:mailgun, github: "chrismccord/mailgun", branch: "master", override: true},
      {:phoenix_live_reload, "~> 1.0",    only: :dev},
      {:ex_machina,          "~> 2.0",    only: :test},
      {:faker,               "~> 0.8",    only: :test},
