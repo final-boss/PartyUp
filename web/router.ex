@@ -1,5 +1,6 @@
 defmodule PartyUp.Router do
   use PartyUp.Web, :router
+  use Addict.RoutesHelper
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,10 +14,11 @@ defmodule PartyUp.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PartyUp do
+  scope "/" do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", PartyUp.PageController, :index
+    addict :routes
   end
 
   # Other scopes may use custom stacks.
