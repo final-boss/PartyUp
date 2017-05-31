@@ -29,6 +29,7 @@ config :addict,
   user_schema: PartyUp.User,
   repo: PartyUp.Repo,
   from_email: "no-reply@partyupapp.com", # CHANGE THIS
+  generate_csrf_token: (fn -> Phoenix.Controller.get_csrf_token end),
 mail_service: nil
 
 # Import environment specific config. This must remain at the bottom
