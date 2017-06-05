@@ -1,8 +1,21 @@
 <header class="header">
-  <nav role="navigation">
-    <ul class="nav nav-pills pull-right">
-      <li><a href="http://www.phoenixframework.org/docs">Home</a></li>
+  <nav class="navbar navbar-toggleable-xl navbar-light bg-faded">
+    <%= link to: "#", class: "navbar-brand" do %>
+      Party Up!
+    <% end %>
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link to: "#", class: "nav-link" do %>
+          Home
+        <% end %>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <%= link to: "#", class: "nav-link" do %>
+          Log In
+        <% end %>
+      </li>
     </ul>
   </nav>
-  <span class="logo"></span>
 </header>
