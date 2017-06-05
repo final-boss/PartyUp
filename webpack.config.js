@@ -36,6 +36,9 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin([]),
+    new webpack.ProvidePlugin({
+      'Tether' : 'tether'
+    }),
     new dotenv(),
     new extract('../css/app.css')
   ]
