@@ -14,11 +14,16 @@ defmodule PartyUp.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/" do
+  scope "/", PartyUp do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PartyUp.PageController, :index
-    addict :routes
+    get "/", PageController, :index
+    addict :routes,
+      login:            [controller: UserController],
+      register:         [controller: UserController],
+      logout:           [controller: UserController],
+      recover_password: [controller: UserController],
+      reset_password:   [controller: UserController]
   end
 
   # Other scopes may use custom stacks.
