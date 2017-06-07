@@ -1,4 +1,5 @@
 import 'phoenix_html';
+import 'turbolinks';
 import 'jquery/src/jquery';
 import 'jquery-ujs/src/rails';
 import 'tether/dist/js/tether';
