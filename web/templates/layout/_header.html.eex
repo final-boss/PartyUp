@@ -13,7 +13,7 @@
     <ul class="nav navbar-nav">
       <%= if is_logged_in(@conn) do %>
         <li class="nav-item">
-          <%= link to: logout_path(@conn, :logout), method: :delete, class: "nav-link" do %>
+          <%= link to: logout_path(@conn, :logout), data: [remote: true, method: :delete], class: "nav-link" do %>
             Log Out
           <% end %>
         </li>
