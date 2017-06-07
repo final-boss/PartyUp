@@ -1,5 +1,6 @@
 defmodule PartyUp.UserController do
   use PartyUp.Web, :controller
+  alias PartyUp.{User}
 
   def register(%{method: "POST"} = conn, user_params) do
     user_params = parse(user_params)
@@ -14,8 +15,9 @@ defmodule PartyUp.UserController do
   end
 
   def register(%{method: "GET"} = conn, _) do
+    changeset = User.changeset(%User{})
     conn
-    |> render("register.html")
+    |> render("register.html", changeset: changeset)
   end
 
   def login(%{method: "POST"} = conn, auth_params) do
@@ -31,8 +33,9 @@ defmodule PartyUp.UserController do
   end
 
   def login(%{method: "GET"} = conn, _) do
+    changeset = User.changeset(%User{})
     conn
-    |> render("login.html")
+    |> render("login.html", changeset: changeset)
   end
 
   def logout(%{method: "DELETE"} = conn, _) do
@@ -65,8 +68,8 @@ defmodule PartyUp.UserController do
   end
 
   def reset_password(%{method: "GET"} = conn, params) do
-    token     = params["token"]
-    signature = params["signature"]
+    token     = params["user"]["token"]
+    signature = params["user"]["signature"]
     conn
     |> render("reset_password.html", token: token, signature: signature)
   end
