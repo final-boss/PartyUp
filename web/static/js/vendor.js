@@ -1,5 +1,6 @@
 import 'phoenix_html';
 import 'jquery/src/jquery';
+import 'jquery-ujs/src/rails';
 import 'tether/dist/js/tether';
 import 'bootstrap/js/src/alert';
 import 'bootstrap/js/src/button';
