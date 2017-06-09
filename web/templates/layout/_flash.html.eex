@@ -1,0 +1,5 @@
+<%= for { key, value } <- get_flash(@conn) do %>
+  <p class="alert <%= "alert-#{key}" %>" role="alert">
+    <%= value %>
+  </p>
+<% end %>

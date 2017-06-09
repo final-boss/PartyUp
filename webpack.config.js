@@ -22,7 +22,7 @@ module.exports = {
           test:    /web\/static\/js\/.*\.jsx?$/,
           exclude: /node_modules|priv/,
           loader:  'babel-loader',
-          options: { presets: ['react', 'es2016'] }
+          options: { presets: ['react', 'es2015'] }
         },
         {
           test: /web\/static\/css\/.*\.scss?$/,
@@ -36,6 +36,9 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin([]),
+    new webpack.ProvidePlugin({
+      'Tether' : 'tether'
+    }),
     new dotenv(),
     new extract('../css/app.css')
   ]

@@ -1,0 +1,16 @@
+<%= form_for @changeset, login_path(@conn, :login), [data: [remote: true]], fn f -> %>
+  <label>
+    Email: <%= text_input f, :email %>
+  </label>
+
+  <label>
+    Password: <%= password_input f, :password %>
+  </label>
+
+  <%= submit "Log in" %>
+<% end %>
+
+<ul>
+  <li><%= link "Recover Password", to: recover_password_path(@conn, :recover_password) %></li>
+  <li><%= link "Register", to: register_path(@conn, :register) %></li>
+</ul>
